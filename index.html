@@ -3089,85 +3089,45 @@
 
 
 
-  <script>
-    const mySwiper = new Swiper(".swiper", {
-      loop: true,
-      slidesPerView: 1.2,
-      centeredSlides: true,
-      spaceBetween: 20,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
+<script>
+  const mySwiper = new Swiper(".swiper", {
+    loop: true,
+    slidesPerView: 1.2,
+    centeredSlides: true,
+    spaceBetween: 20,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2.6,
+        spaceBetween: 40,
       },
-      breakpoints: {
-        768: {
-          slidesPerView: 2.6,
-          spaceBetween: 40,
-        },
-      },
+    },
+  });
+
+  let count = 1;
+  const pageNumElement = document.querySelectorAll(".js-pageNum");
+  const pageFormElement = document.querySelectorAll(".js-pageForm");
+  const pageTextElement = document.querySelectorAll(".js-pageText");
+  const pageHeight = document.querySelectorAll(".js-pageHeight");
+
+  const giveClass = (method) => {
+    pageNumElement.forEach((el) => {
+      el.classList.toggle("num_active", el.dataset.page == count);
     });
 
-    let count = 1;
-    const pageNumElement = document.querySelectorAll(".js-pageNum");
-    const pageFormElement = document.querySelectorAll(".js-pageForm");
-    const pageTextElement = document.querySelectorAll(".js-pageText");
-    const pageHeight = document.querySelectorAll(".js-pageHeight");
+    pageFormElement.forEach((el) => {
+      const isActive = el.dataset.page == count;
+      el.classList.toggle("form_active", isActive);
+      el.classList.toggle("prev_active", el.dataset.page == count - 1);
+      el.style.display = isActive ? "block" : "none";
+    });
 
-    const giveClass = (method) => {
-        pageNumElement.forEach((el) => {
-          el.classList.toggle("num_active", el.dataset.page == count);
-        });
-
-        pageFormElement.forEach((el) => {
-          const isActive = el.dataset.page == count;
-          el.classList.toggle("form_active", isActive);
-          el.classList.toggle("prev_active", el.dataset.page == count - 1);
-
-          // 🔥 displayで強制切り替え（重なり対策）
-          el.style.display = isActive ? "block" : "none";
-        });
-
-        pageTextElement.forEach((el) => {
-          el.classList.toggle("text_active", el.dataset.page == count);
-        });
-
-        pageHeight.forEach((el) => {
-          for (let i = 1; i <= 9; i++) {
-            el.classList.remove(`page_height0${i}`);
-          }
-          el.classList.add(`page_height0${count}`);
-        });
-
-      pageNumElement.forEach((el) => {
-        el.classList.toggle("num_active", el.dataset.page == count);
-      });
-
-      pageFormElement.forEach((el) => {
-        el.classList.toggle("form_active", el.dataset.page == count);
-        el.classList.toggle("prev_active", el.dataset.page == count - 1);
-      });
-
-      pageTextElement.forEach((el) => {
-        el.classList.toggle("text_active", el.dataset.page == count);
-      });
-
-      pageHeight.forEach((el) => {
-        const from = method === "next" ? count - 1 : count + 1;
-        el.classList.replace(`page_height0${from}`, `page_height0${count}`);
-      });
-    };
-
-
-
-    const next = () => {
-      count++;
-      giveClass("next");
-    };
-
-    const prev = () => {
-      count--;
-      giveClass("prev");
-    };
+    pageTextElement.forEach((el) => {
+      el.classList.toggle("text_active", el.dataset.page == count);
+    });
 
     pageHeight.forEach((el) => {
       for (let i = 1; i <= 9; i++) {
@@ -3175,95 +3135,110 @@
       }
       el.classList.add(`page_height0${count}`);
     });
+  };
 
-    
-
-
-
-
-
-
-    const answer = (target, num) => {
-      const val = target.value?.trim() || '';
-      const hidden = document.getElementById(`js-answer0${num}`);
-
-      if (hidden) {
-        hidden.value = val;
-      }
-    };
-
-
-
-
-
-    const updateFullName = () => {
-      const last = document.getElementById("last_name")?.value.trim() || '';
-      const first = document.getElementById("first_name")?.value.trim() || '';
-      const fullNameHidden = document.getElementById("js-answer11");
-      if (fullNameHidden) {
-        fullNameHidden.value = `${last} ${first}`.trim();
-      }
-    };
-
-    const submit = () => {
-      document.getElementById("js-answer08").value =
-        document.getElementById("postal")?.value.trim();
-
-      const year = document.getElementById("birth_year")?.value.trim();
-      const month = document.getElementById("birth_month")?.value.trim();
-      const day = document.getElementById("birth_day")?.value.trim();
-      if (!year || !month || !day) {
-        alert("生年月日をすべて入力してください");
+  const next = () => {
+    // ✅ ページ8：郵便番号バリデーション
+    if (count === 8) {
+      const postal = document.getElementById("postal")?.value.trim();
+      if (!postal) {
+        alert("郵便番号を入力してください");
         return;
       }
-      document.getElementById("js-answer10").value =
-        `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
+    }
 
-      updateFullName();
+    count++;
+    giveClass("next");
+  };
 
-      const edu = document.getElementById("gender")?.value?.trim() || "";
-      document.getElementById("js-answer09").value = edu;
+  const prev = () => {
+    count--;
+    giveClass("prev");
+  };
 
-      const tel = document.getElementById("tel01")?.value.trim().replace(/-/g, "");
-      document.getElementById("js-answer12").value = tel;
+  pageHeight.forEach((el) => {
+    for (let i = 1; i <= 9; i++) {
+      el.classList.remove(`page_height0${i}`);
+    }
+    el.classList.add(`page_height0${count}`);
+  });
 
-      const requiredFields = [
-        { id: 1, label: "あなたの今のお気持ちは？" },
-        { id: 2, label: "どのような業界を希望していますか？" },
-        { id: 3, label: "現在のお仕事内容は？" },
-        { id: 4, label: "お仕事の状況" },
-        { id: 5, label: "ご希望の働き方" },
-        { id: 6, label: "ご希望の時間帯" },
-        { id: 7, label: "いつ頃の転職をご希望ですか？" },
-        { id: 8, label: "お住まいの郵便番号" },
-        { id: 9, label: "性別" },
-        { id: 10, label: "生年月日" },
-        { id: 11, label: "お名前" },
-        { id: 12, label: "電話番号" },
-      ];
+  const answer = (target, num) => {
+    const val = target.value?.trim() || '';
+    const hidden = document.getElementById(`js-answer0${num}`);
+    if (hidden) {
+      hidden.value = val;
+    }
+  };
 
-      const telRegex = /^0\d{9,10}$/;
+  const updateFullName = () => {
+    const last = document.getElementById("last_name")?.value.trim() || '';
+    const first = document.getElementById("first_name")?.value.trim() || '';
+    const fullNameHidden = document.getElementById("js-answer11");
+    if (fullNameHidden) {
+      fullNameHidden.value = `${last} ${first}`.trim();
+    }
+  };
 
-      for (const field of requiredFields) {
-        const id = `js-answer${String(field.id).padStart(2, "0")}`;
-        const ans = document.getElementById(id);
-        if (!ans || ans.value.trim() === "") {
-          alert(`${field.label} が未入力です`);
-          return;
-        }
-        if (field.id === 12 && !telRegex.test(ans.value)) {
-          alert("電話番号はハイフンなしの半角数字で入力してください");
-          return;
-        }
+  const submit = () => {
+    document.getElementById("js-answer08").value =
+      document.getElementById("postal")?.value.trim();
+
+    const year = document.getElementById("birth_year")?.value.trim();
+    const month = document.getElementById("birth_month")?.value.trim();
+    const day = document.getElementById("birth_day")?.value.trim();
+    if (!year || !month || !day) {
+      alert("生年月日をすべて入力してください");
+      return;
+    }
+    document.getElementById("js-answer10").value =
+      `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
+
+    updateFullName();
+
+    const edu = document.getElementById("gender")?.value?.trim() || "";
+    document.getElementById("js-answer09").value = edu;
+
+    const tel = document.getElementById("tel01")?.value.trim().replace(/-/g, "");
+    document.getElementById("js-answer12").value = tel;
+
+    const requiredFields = [
+      { id: 1, label: "あなたの今のお気持ちは？" },
+      { id: 2, label: "どのような業界を希望していますか？" },
+      { id: 3, label: "現在のお仕事内容は？" },
+      { id: 4, label: "お仕事の状況" },
+      { id: 5, label: "ご希望の働き方" },
+      { id: 6, label: "ご希望の時間帯" },
+      { id: 7, label: "いつ頃の転職をご希望ですか？" },
+      { id: 8, label: "お住まいの郵便番号" },
+      { id: 9, label: "性別" },
+      { id: 10, label: "生年月日" },
+      { id: 11, label: "お名前" },
+      { id: 12, label: "電話番号" },
+    ];
+
+    const telRegex = /^0\d{9,10}$/;
+
+    for (const field of requiredFields) {
+      const id = `js-answer${String(field.id).padStart(2, "0")}`;
+      const ans = document.getElementById(id);
+      if (!ans || ans.value.trim() === "") {
+        alert(`${field.label} が未入力です`);
+        return;
       }
+      if (field.id === 12 && !telRegex.test(ans.value)) {
+        alert("電話番号はハイフンなしの半角数字で入力してください");
+        return;
+      }
+    }
 
-      document.forms["answerform"].submit();
-    };
+    document.forms["answerform"].submit();
+  };
 
-    // 初期表示
-    giveClass();
+  // 初期表示
+  giveClass();
+</script>
 
-  </script>
 
 
 </body>
