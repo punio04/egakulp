@@ -3948,6 +3948,15 @@ img.wp-image-1357 {
     margin-bottom: 50px;
   }
 
+    .text-\[\#659ed8\] {
+      --tw-text-opacity: 1;
+      color: #22AEBF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding: 11px 22px;
+    }
 
   .entry-content .wp-block-separator {
     height: 1px;
