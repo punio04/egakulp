@@ -362,7 +362,7 @@ body {
   display: inline-block;
   top: -75px;
   right: 5px;
-  color: #D2EDF8;
+  color: #4fc3acbd;
   font-size: 8rem;
 }
 
@@ -376,7 +376,7 @@ body {
 .home-intro-set__bg {
   position: absolute;
   z-index: -5;
-  background: #f2f8f9;
+  background: #FCFDE2;
 }
 
 .home-intro-set:nth-of-type(odd) .home-intro-set__bg {
@@ -544,7 +544,7 @@ p.has-text-align-center.is-style-webfont1.has-text-color.has-normal-font-size {
   margin-bottom: 0px;
   font-size: 25px;
   font-weight: 500;
-  color: #EE5840;
+  color: #ff7f02;
   line-height: normal;
 }
 
@@ -561,7 +561,7 @@ p.has-text-align-center.is-style-webfont1.has-text-color.has-normal-font-size {
   width: 32px;
   height: 32px;
   content: "";
-  border-bottom: 2px solid #ee5840;
+  border-bottom: 2px solid #ff7f02;
 }
 
 ._microcopy_1lmqm_33:after {
@@ -1185,7 +1185,7 @@ input[type="color"],
 
 .border-\[\#659ed8\] {
   --tw-border-opacity: 1;
-  border-color: #22AEBF;
+  border-color: #4fc3ac;
 }
 
 .border-neutral-200 {
@@ -1212,9 +1212,9 @@ input[type="color"],
   background-color: transparent;
 }
 
-.bg-\[\#f2614e\] {
+.bg-\[\#ff7f02\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(242 97 78 / var(--tw-bg-opacity));
+  background-color: #ff7f02;
 }
 
 .py-o-28 {
@@ -1292,8 +1292,8 @@ input[type="color"],
 
 .text-\[\#659ed8\] {
   --tw-text-opacity: 1;
-  color: #22AEBF;
-  border: 2px solid #22AEBF;
+  color: #4fc3ac;
+  border: 2px solid #4fc3ac;
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -1311,9 +1311,9 @@ input[type="color"],
   color: rgb(207 211 215 / var(--tw-text-opacity));
 }
 
-.text-\[\#f2614e\] {
+.text-\[\#ff7f02\] {
   --tw-text-opacity: 1;
-  color: rgb(242 97 78 / var(--tw-text-opacity));
+  color: #ff7f02;
 }
 
 .text-\[\#a7a9ab\] {
@@ -1358,7 +1358,7 @@ html {
 
 .form_shadow {
   box-shadow: 0 0 16px rgb(104, 122, 135, 0.2);
-  border: 4px solid #26b7c9;
+  border: 4px solid #4fc3ac;
 }
 
 .num_active {
@@ -1403,7 +1403,7 @@ html {
 
 .hover\:bg-\[\#659ed8\]:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(34 170 192);
+  background-color: #4fc3ac;
 }
 
 .hover\:bg-\[\#ef371e\]:hover {
@@ -1654,7 +1654,7 @@ button#send01:hover {
     margin-bottom: 0px;
     font-size: 20px;
     font-weight: 500;
-    color: #EE5840;
+    color: #ff7f02;
     line-height: normal;
   }
 
@@ -1665,7 +1665,7 @@ button#send01:hover {
     width: 24px;
     height: 24px;
     content: "";
-    border-bottom: 2px solid #ee5840;
+    border-bottom: 2px solid #ff7f02;
   }
 
   figure.wp-block-image.aligncenter.size-full.is-resized {
@@ -1674,7 +1674,7 @@ button#send01:hover {
 
   .form_shadow {
     box-shadow: 0 0 16px rgb(104, 122, 135, 0.2);
-    border: 4px solid #26b7c9;
+    border: 4px solid #4fc3ac;
     margin: 0 10px !important;
   }
 }
@@ -2389,7 +2389,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .border-\[\#659ed8\] {
   --tw-border-opacity: 1;
-  border-color: #22AEBF;
+  border-color: #4fc3ac;
 }
 
 .border-\[\#cfd3d7\] {
@@ -2436,9 +2436,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: transparent;
 }
 
-.bg-\[\#f2614e\] {
+.bg-\[\#ff7f02\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(242 97 78 / var(--tw-bg-opacity));
+  background-color: #ff7f02;
 }
 
 .bg-blue-300 {
@@ -2528,7 +2528,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .text-\[\#659ed8\] {
   --tw-text-opacity: 1;
-  color: #22AEBF;
+  color: #4fc3ac;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2550,9 +2550,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(166 168 170 / var(--tw-text-opacity));
 }
 
-.text-\[\#f2614e\] {
+.text-\[\#ff7f02\] {
   --tw-text-opacity: 1;
-  color: rgb(242 97 78 / var(--tw-text-opacity));
+  color: #ff7f02;
 }
 
 .text-\[\#d4a9db\] {
@@ -2721,7 +2721,7 @@ html {
 }
 
 .num_active {
-  background: #f2614e;
+  background: #ff7f02;
 }
 
 .prev_active {
@@ -2740,7 +2740,7 @@ html {
 }
 
 .text_active {
-  color: #f2614e;
+  color: #ff7f02;
 }
 
 .mainbg {
@@ -2801,7 +2801,7 @@ html {
 
 .section-ttl h2 {
   font-size: 30px !important;
-  background-color: #26b7c9;
+  background-color: #4fc3ac;
 }
 
 
@@ -2962,7 +2962,7 @@ html {
 
 .hover\:bg-\[\#659ed8\]:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(34 170 192);
+  background-color: #4fc3ac;
 }
 
 .hover\:bg-\[\#ef371e\]:hover {
@@ -2982,7 +2982,7 @@ html {
 
 .peer:checked~.peer-checked\:bg-\[\#659ed8\] {
   --tw-bg-opacity: 1;
-  background-color: #22AEBF;
+  background-color: #4fc3ac;
 }
 
 .peer:checked~.peer-checked\:text-white {
@@ -3697,7 +3697,7 @@ img.wp-image-1357 {
 
   /* 現在のステップ */
   .step-progress li.active {
-    background: #f2614e;
+    background: #ff7f02;
   }
 }
 
@@ -3940,7 +3940,7 @@ img.wp-image-1357 {
     display: inline-block;
     top: -110px;
     right: 5px;
-    color: #D2EDF8;
+    color: #4fc3acbd;
     font-size: 8rem;
   }
 
@@ -3950,12 +3950,12 @@ img.wp-image-1357 {
 
     .text-\[\#659ed8\] {
       --tw-text-opacity: 1;
-      color: #22AEBF;
+      color: #4fc3ac;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100%;
-      padding: 11px 19px;
+      padding: 11px 6px;
     }
 
   .entry-content .wp-block-separator {
@@ -4130,7 +4130,7 @@ img.wp-image-1357 {
     width: 20px;
     height: 20px;
     content: "";
-    border-bottom: 2px solid #ee5840;
+    border-bottom: 2px solid #ff7f02;
   }
 
   .wp-block-spacer {
