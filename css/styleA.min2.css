@@ -688,7 +688,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .border-\[\#659ed8\] {
   --tw-border-opacity: 1;
-  border-color: #22AEBF;
+  border-color: #4fc3ac;
 }
 
 .border-\[\#cfd3d7\] {
@@ -735,9 +735,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: transparent;
 }
 
-.bg-\[\#f2614e\] {
+.bg-\[\#ff7f02\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(242 97 78 / var(--tw-bg-opacity));
+  background-color: #ff7f02;
 }
 
 .bg-blue-300 {
@@ -827,7 +827,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .text-\[\#659ed8\] {
   --tw-text-opacity: 1;
-  color: #22AEBF;
+  color: #4fc3ac;
   display: flex;
   justify-content: center;
     align-items: center;
@@ -849,9 +849,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(166 168 170 / var(--tw-text-opacity));
 }
 
-.text-\[\#f2614e\] {
+.text-\[\#ff7f02\] {
   --tw-text-opacity: 1;
-  color: rgb(242 97 78 / var(--tw-text-opacity));
+  color: #ff7f02;
 }
 
 .text-\[\#d4a9db\] {
@@ -1020,7 +1020,7 @@ html {
 }
 
 .num_active {
-  background: #f2614e;
+  background: #ff7f02;
 }
 
 .prev_active {
@@ -1039,7 +1039,7 @@ html {
 }
 
 .text_active {
-  color: #f2614e;
+  color: #ff7f02;
 }
 
 .mainbg {
