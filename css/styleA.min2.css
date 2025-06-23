@@ -688,7 +688,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .border-\[\#659ed8\] {
   --tw-border-opacity: 1;
-  border-color: #4fc3ac;
+  border-color: #24b478;
 }
 
 .border-\[\#cfd3d7\] {
@@ -735,9 +735,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: transparent;
 }
 
-.bg-\[\#ff7f02\] {
+.bg-\[\#ea8f14\] {
   --tw-bg-opacity: 1;
-  background-color: #ff7f02;
+  background-color: #ea8f14;
 }
 
 .bg-blue-300 {
@@ -827,7 +827,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .text-\[\#659ed8\] {
   --tw-text-opacity: 1;
-  color: #4fc3ac;
+  color: #24b478;
   display: flex;
   justify-content: center;
     align-items: center;
@@ -849,9 +849,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(166 168 170 / var(--tw-text-opacity));
 }
 
-.text-\[\#ff7f02\] {
+.text-\[\#ea8f14\] {
   --tw-text-opacity: 1;
-  color: #ff7f02;
+  color: #ea8f14;
 }
 
 .text-\[\#d4a9db\] {
@@ -1020,7 +1020,7 @@ html {
 }
 
 .num_active {
-  background: #ff7f02;
+  background: #ea8f14;
 }
 
 .prev_active {
@@ -1039,7 +1039,7 @@ html {
 }
 
 .text_active {
-  color: #ff7f02;
+  color: #ea8f14;
 }
 
 .mainbg {
@@ -1236,7 +1236,7 @@ html {
 
 .before\:right-o-8::before {
   content: var(--tw-content);
-  right: 0.08rem;
+  right: 1.1rem;
 }
 
 
