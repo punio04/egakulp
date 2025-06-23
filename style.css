@@ -3811,6 +3811,33 @@ img.wp-image-1357 {
     font-size: 20px !important;
     padding: 10px 0;
   }
+
+  .page_height02 {
+    height: 39.8rem;
+  }
+
+  .page_height03 {
+    height: 37.7rem;
+  }
+
+
+
+    .page_height04 {
+      height: 24.6rem;
+    }
+  
+    .page_height05 {
+      height: 30.1rem;
+    }
+  
+    .page_height06 {
+      height: 27.6rem;
+    }
+  
+    .page_height07 {
+      height: 86.3rem;
+    }
+
 }
 
 
@@ -3830,7 +3857,7 @@ img.wp-image-1357 {
   }
 
   .w-o-290 {
-    width: 15.5rem;
+    width: auto;
   }
 
   .top-\[calc\(50\%_-_0\.04rem\)\] {
@@ -3878,7 +3905,7 @@ img.wp-image-1357 {
   }
 
   .page_height02 {
-    height: 32.5rem;
+    height: 34.5rem;
   }
 
   .page_height03 {
@@ -3973,7 +4000,7 @@ img.wp-image-1357 {
 
   .w-o-608,
   .w-o-614 {
-    width: 90% !important;
+    width: 95% !important;
     margin-top: 10px;
   }
 
