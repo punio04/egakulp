@@ -86,10 +86,10 @@ $confirmDsp = 0;
 // 送信完了後に自動的に指定のページ(サンクスページなど)に移動する(する=1, しない=0)
 // CV率を解析したい場合などはサンクスページを別途用意し、URLをこの下の項目で指定してください。
 // 0にすると、デフォルトの送信完了画面が表示されます。
-$jumpPage = 0;
+$jumpPage = 1;
 
 // 送信完了後に表示するページURL（上記で1を設定した場合のみ）※httpから始まるURLで指定ください。（相対パスでも基本的には問題ないです）
-$thanksPage = "";
+$thanksPage = "http://localhost:8888/egaku/thanks.html";
 
 // 必須入力項目を設定する(する=1, しない=0)
 $requireCheck = 1;
@@ -239,9 +239,6 @@ if (empty($errm)) {
 }
 
 if (($confirmDsp == 0 || $sendmail == 1) && $empty_flag != 1) {
-    // GASにも送信内容を送る
-    sendToSpreadsheet($_POST);
-
     //トークンチェック（CSRF対策）※確認画面がONの場合のみ実施
     if ($useToken == 1 && $confirmDsp == 1) {
         if (empty($_SESSION['mailform_token']) || ($_SESSION['mailform_token'] !== $_POST['mailform_token'])) {
@@ -494,9 +491,6 @@ if (($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &
                 } else {
                     $out = $val;
                 } //チェックボックス（配列）追記ここまで
-                if (get_magic_quotes_gpc()) {
-                    $out = stripslashes($out);
-                }
 
                 //全角→半角変換
                 if ($hankaku == 1) {
@@ -528,9 +522,7 @@ if (($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &
                 } else {
                     $out = $val;
                 } //チェックボックス（配列）追記ここまで
-                if (get_magic_quotes_gpc()) {
-                    $out = stripslashes($out);
-                }
+
                 $out = nl2br(h($out)); //※追記 改行コードを<br>タグに変換
                 $key = h($key);
                 $out = str_replace($replaceStr['before'], $replaceStr['after'], $out); //機種依存文字の置換処理
