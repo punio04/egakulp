@@ -1324,7 +1324,7 @@ input[type="color"],
 
 .text-\[\#a7a9ab2\] {
   --tw-text-opacity: 1;
-  color: rgb(167 169 171 / var(--tw-text-opacity));
+  color: rgb(51 51 51);
   margin-top: 10px;
 }
 
@@ -1526,7 +1526,7 @@ html {
 }
 
 .page_height07 {
-  height: 96.3rem;
+  height: 101.3rem;
 }
 
 button:hover,
@@ -1578,10 +1578,10 @@ a.btn-gray-3d:hover,
 p.btn-gray-3d:hover,
 a.btn-gray-3d-sma:hover,
 p.btn-gray-3d-sma:hover {
-  opacity: 0.6;
+  opacity: 0.5;
   filter: alpha(opacity=60);
   -ms-filter: "alpha( opacity=60 )";
-  color: rgb(167 169 171 / var(--tw-text-opacity));
+  color: rgb(51 51 51);
 }
 
 button#send01 {
@@ -2912,6 +2912,108 @@ html {
   background-image: url(../images/actionIcon_hover.png);
 }
 
+.voice-box-frame {
+  background-color: #E9F4F0;
+  padding: 7px;
+}
+
+.voice-box {
+  background: #fff;
+  padding: 20px 25px;
+  margin-bottom: 30px;
+}
+
+.voice-box-last {
+  background: #fff;
+  padding: 20px 25px;
+}
+
+.voice-comment {
+  font-size: 16px;
+}
+
+.voice-head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.voice-head img {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+}
+
+.voice-head h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #24b478;
+  margin: 0;
+}
+
+.voice-job {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 2px 7px;
+  margin-right: 8px;
+  display: inline-block;
+}
+
+.label.before {
+  background: #ffffff;
+  color: #000;
+  border: 2px solid #24b478;
+}
+
+.label.after {
+  background: #24b478;
+  border: 2px solid #24b478;
+  color: #fff;
+}
+
+.voice-section {
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 3px;
+  border: 10px solid #ffffff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.job-text {
+  font-size: 17px;
+}
+
+.voice-head h3 {
+  font-size: 18px;
+}
+
+.voice-comment {
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+.voice-job-frame {
+  background-color: #E9F4F0;
+  padding: 10px 10px;
+}
+
+button,
+input,
+textarea {
+  border: 1px solid rgb(51 51 51);
+}
+
+.text-\[\#a7a9ab\] {
+  color: rgb(51 51 51);
+}
+
 @media screen and (min-width: 768px) {
   .btn_arrow02::before {
     width: 0.2rem;
@@ -2974,6 +3076,20 @@ html {
 .peer:checked~.peer-checked\:text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+#send01:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.text-\[\#007a52\].underline {
+  color: #333;
+  padding-left: 8px;
+}
+
+.text-\[\#007a52\].underline:hover {
+  opacity: 0.6;
 }
 
 @media (min-width: 769px) {
@@ -3700,6 +3816,15 @@ img.wp-image-1357 {
 
 @media screen and (max-width: 768px) {
 
+  .voice-section {
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 3px;
+    border: 10px solid #ffffff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    margin: 0 10px;
+  }
+
   /* ステップバーの幅と間隔を調整 */
   .flex.gap-o-32 {
     flex-wrap: wrap;
@@ -3807,7 +3932,7 @@ img.wp-image-1357 {
   }
 
   .page_height07 {
-    height: 84.3rem;
+    height: 87.3rem;
   }
 
   .cta-subttl {
@@ -3837,7 +3962,7 @@ img.wp-image-1357 {
 
   .text-\[\#a7a9ab2\] {
     --tw-text-opacity: 1;
-    color: rgb(167 169 171 / var(--tw-text-opacity));
+    color: rgb(51 51 51);
     margin-top: 10px;
     width: 29.5rem !important;
   }
@@ -3907,7 +4032,7 @@ img.wp-image-1357 {
   }
 
   .page_height07 {
-    height: 86.3rem;
+    height: 88.3rem;
   }
 
 }
@@ -3946,6 +4071,12 @@ img.wp-image-1357 {
     margin: 0 20px !important;
   }
 
+  .voice-job {
+    display: flex;
+    align-items: flex-start;
+    margin: 5px 0;
+    flex-direction: column;
+  }
 
 
   .w-full {
@@ -4021,12 +4152,12 @@ img.wp-image-1357 {
   }
 
   .page_height07 {
-    height: 73.8rem;
+    height: 77.8rem;
   }
 
   .text-\[\#a7a9ab2\] {
     --tw-text-opacity: 1;
-    color: rgb(167 169 171 / var(--tw-text-opacity));
+    color: rgb(51 51 51);
     margin-top: 10px;
     width: 55% !important;
   }
@@ -4380,6 +4511,6 @@ img.wp-image-1357 {
   }
 
   .page_height07 {
-    height: 74.8rem;
+    height: 79.8rem;
   }
 }
