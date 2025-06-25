@@ -1318,7 +1318,6 @@ input[type="color"],
 
 .text-\[\#a7a9ab\] {
   --tw-text-opacity: 1;
-  color: rgb(167 169 171 / var(--tw-text-opacity));
   margin-top: 35px;
 }
 
@@ -3973,7 +3972,6 @@ img.wp-image-1357 {
 
   .text-\[\#a7a9ab\] {
     --tw-text-opacity: 1;
-    color: rgb(167 169 171 / var(--tw-text-opacity));
     margin-top: 14px;
     width: 29.5rem;
   }
@@ -4121,7 +4119,6 @@ img.wp-image-1357 {
 
   .text-\[\#a7a9ab\] {
     --tw-text-opacity: 1;
-    color: rgb(167 169 171 / var(--tw-text-opacity));
     margin-top: 14px;
     width: 55%;
   }
