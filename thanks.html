@@ -7,7 +7,15 @@
   <title>送信完了 | えがくキャリア</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    body,
+    html {
+      height: 100%;
+    }
+
     body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       font-family: 'Noto Sans JP', sans-serif;
       margin: 0;
       padding: 0;
@@ -16,14 +24,15 @@
     }
 
     .container {
+      width: 90%;
       max-width: 720px;
-      margin: 80px auto;
       padding: 40px 20px;
       background-color: #fff;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       text-align: center;
     }
+
 
     h1 {
       font-size: 28px;
@@ -52,7 +61,24 @@
       background-color: #1f9b67;
     }
 
+    .pc {
+      display: block;
+    }
+
+    .sp {
+      display: none;
+    }
+
     @media screen and (max-width: 600px) {
+
+      .pc {
+        display: none;
+      }
+
+      .sp {
+        display: block;
+      }
+
       .container {
         margin: 40px 16px;
         padding: 30px 16px;
@@ -79,10 +105,10 @@
 
 <body>
   <div class="container">
-    <h1>お問い合わせありがとうございます</h1>
+    <h1>お問い合わせ<br class="sp">ありがとうございます</h1>
     <p>送信が完了しました。<br>
-      担当者より折り返しご連絡いたしますので、<br>
-      今しばらくお待ちいただけますようお願いいたします。</p>
+      担当者より折り返し<br class="sp">ご連絡いたしますので、<br>
+      今しばらくお待ちいただけますよう<br class="sp">お願いいたします。</p>
     <a href="index.html" class="btn">トップページに戻る</a>
   </div>
 </body>
